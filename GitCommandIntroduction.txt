@@ -1,0 +1,10 @@
+1.创建git仓库
+	mkdir /F/GitRepository
+	cd /F/GitRepository
+	pwd
+	/F/GitRepository
+2.初始化git仓库
+	git init
+3.添加文件到git仓库
+	git add <file>，注意，可反复多次使用，添加多个文件；
+	git commit -m <message>，完成。//message为本次提交的说明文字，方便以后查找
