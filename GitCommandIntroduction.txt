@@ -1,4 +1,5 @@
 //git窗口显示no next tag时，按下q键即可退出并重新输入
+//注意：下面命令中出现的<>实际不需要打出来，<>只是为了提醒用户该内容是用户自行输入
 
 1.创建git仓库
 	mkdir /F/GitRepository
@@ -40,4 +41,15 @@
 也是一个修改，删了一些又加了一些，也是一个修改，甚至创建一个新文件，也算一个修改。
 	每次修改，如果不用git add到暂存区，那就不会加入到commit中。//三步：修改--git add--git commit
 14.查看工作区和版本库里面最新版本的区别
-	git diff HEAD -- GitCommandIntroduction.txt
+	git diff HEAD -- <file>
+15.未git commit之前，撤回/丢弃工作区的修改
+	git checkout -- <file>
+16.未git commit之前，撤回/丢弃暂存区的修改
+	第一步，用命令git reset HEAD <file>可以把暂存区的修改撤销掉（unstage），重新放回工作区
+	第二步，git checkout -- <file>
+17.git commit之后，想撤回修改
+	git reset --hard commit_id //前面已经提到过
+//以上几个命令，Git窗口进行操作时，都会提示的，仔细看一看
+//注意：git checkout -- file命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令，我们在后面的分
+//支管理中会再次遇到git checkout命令
+
