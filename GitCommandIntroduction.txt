@@ -1,3 +1,5 @@
+//git窗口显示no next tag时，按下q键即可退出并重新输入
+
 1.创建git仓库
 	mkdir /F/GitRepository
 	cd /F/GitRepository
@@ -32,3 +34,10 @@
 	工作区里隐藏的目录.git，包括暂存区(stage/index)和分支(第一个分支叫master)
 	//git add就是把文件修改添加到暂存区；
 	//git commit就是把暂存区的所有内容提交到当前分支。(分支只有一个master时，就是全添加到master)
+	//关于工作区和版本库的直观图示，请看廖雪峰的git教程“时光机穿梭--工作区和暂存区”
+13.Git跟踪并管理的是修改，而非文件。
+	你会问，什么是修改？比如你新增了一行，这就是一个修改，删除了一行，也是一个修改，更改了某些字符，
+也是一个修改，删了一些又加了一些，也是一个修改，甚至创建一个新文件，也算一个修改。
+	每次修改，如果不用git add到暂存区，那就不会加入到commit中。//三步：修改--git add--git commit
+14.查看工作区和版本库里面最新版本的区别
+	git diff HEAD -- GitCommandIntroduction.txt
