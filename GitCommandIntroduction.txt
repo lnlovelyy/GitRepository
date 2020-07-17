@@ -8,3 +8,8 @@
 3.添加文件到git仓库
 	git add <file>，注意，可反复多次使用，添加多个文件；
 	git commit -m <message>，完成。//message为本次提交的说明文字，方便以后查找
+4.查看工作区的状态(是否有修改/待提交文件)
+	git status
+5.查看修改内容
+	git diff   
+//确认修改内容无误后，便可git add 、git commit提交更新文件
