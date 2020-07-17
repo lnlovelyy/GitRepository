@@ -26,3 +26,9 @@
 	git reset --hard commit_id  
 	//由于commit_id很长，只用前面可以标识其唯一性的几位数字即可，git是可以自行找到(强烈推荐)
 	//也可以用git reset --hard HEAD/HEAD^等回到前1/2/……次版本，但是不如直接commit_id好区分
+11.工作区(Working Directory)
+	存放文件的目录
+12.版本库(Repository)
+	工作区里隐藏的目录.git，包括暂存区(stage/index)和分支(第一个分支叫master)
+	//git add就是把文件修改添加到暂存区；
+	//git commit就是把暂存区的所有内容提交到当前分支。(分支只有一个master时，就是全添加到master)
